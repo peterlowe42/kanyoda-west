@@ -13,14 +13,23 @@ class Kanyoda < ActiveRecord::Base
 private
 
   def self.make_tweet
-    origional = self.get_tweet
-    if origional == @@last_tweet
-      origional = self.get_tweet(rand(0..20)) 
+    original = self.get_tweet
+    if original == @@last_tweet
+      original = self.get_tweet(rand(0...20)) 
     else
-      @@last_tweet = origional
+      @@last_tweet = original
     end 
-    clean_tweet = self.clean_up_tweet(origional)
-    return self.yodaize(clean_tweet)
+    clean_tweet = self.clean_up_tweet(original)
+    new_tweet = self.yodaize(clean_tweet)
+    if self.tweet_ok?(new_tweet, original)
+      return new_tweet
+    else
+      return self.make_tweet
+    end
+  end
+
+  def self.tweet_ok?(tweet, original)
+    (tweet == original || tweet.match(/<!DOCTYPE html>.*/)) ? false : true
   end
 
   def self.clean_up_tweet(tweet)
@@ -47,7 +56,6 @@ private
   def self.yodaize(tweet)
     new_string = tweet.dup
     sentence = new_string.gsub! /\s+/, '+'
-    p sentence
     resp = HTTParty.get("https://yoda.p.mashape.com/yoda?sentence=#{sentence}", headers:{ 'X-Mashape-Key' => ENV['MASHAPE_KEY']})
     return resp.parsed_response
   end
