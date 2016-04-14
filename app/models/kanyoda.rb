@@ -21,7 +21,7 @@ private
     end 
     clean_tweet = self.clean_up_tweet(original)
     new_tweet = self.yodaize(clean_tweet)
-    if self.tweet_ok?(new_tweet, original)
+    if self.tweet_ok?(new_tweet, clean_tweet)
       return new_tweet
     else
       return self.make_tweet
@@ -63,4 +63,3 @@ private
   
 end
 
-# All respect prayers and love to Phife’s family    Thank you for so much inspiration

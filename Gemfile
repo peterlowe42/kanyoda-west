@@ -25,8 +25,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'twitter'
 
-gem 'whenever'
-
 gem 'httparty'
 
 # Use ActiveModel has_secure_password
