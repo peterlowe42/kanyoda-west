@@ -1,0 +1,71 @@
+[33mcommit 7be50cccf9a72716b6852a7c022b2d08e9478914[m
+Author: peterlowe42 <peter.lowe42@gmail.com>
+Date:   Wed Apr 13 15:40:32 2016 -0700
+
+    Make index page
+
+[33mcommit a2c6b47f58075d71c7390fc7d19abcaca9fafe02[m
+Author: peterlowe42 <peter.lowe42@gmail.com>
+Date:   Wed Apr 13 15:34:34 2016 -0700
+
+    Change sqlite3 to pg
+
+[33mcommit b52268c2fe91a6872f0caece35a9a3f0873d876f[m
+Author: peterlowe42 <peter.lowe42@gmail.com>
+Date:   Wed Apr 13 15:15:19 2016 -0700
+
+    Switch from unirest to Httparty and automate tweet process with whenever gem
+
+[33mcommit 422059298423d999d3553acb3c7fc24b28584607[m
+Author: peterlowe42 <peter.lowe42@gmail.com>
+Date:   Wed Apr 13 11:58:07 2016 -0700
+
+    Change yoda api
+
+[33mcommit 84f19910a15475d0f031e6f74ceaac14fa628570[m
+Author: peterlowe42 <peter.lowe42@gmail.com>
+Date:   Tue Apr 12 13:38:09 2016 -0700
+
+    Add yodaize method
+
+[33mcommit f052c652eda2d15dd8a59c4ed70d34e25ee3d62a[m
+Author: peterlowe42 <peter.lowe42@gmail.com>
+Date:   Tue Apr 12 12:11:13 2016 -0700
+
+    Set up bot model and add get_tweet method
+
+[33mcommit 782d432ead8b8447393a49a4a77b3a8dadd7b190[m
+Author: peterlowe42 <peter.lowe42@gmail.com>
+Date:   Tue Apr 12 10:48:03 2016 -0700
+
+    Add twitter api keys and update gitignore
+
+[33mcommit d8270225a896ccad453d61ef66e960148e960cf7[m
+Author: peterlowe42 <peter.lowe42@gmail.com>
+Date:   Tue Apr 12 10:07:12 2016 -0700
+
+    Create new rails app
+
+[33mcommit 6860f388c63ed65892cd12d938b2cb2e32a7d850[m
+Author: Peter Lowe <peter.lowe42@gmail.com>
+Date:   Tue Apr 12 10:03:38 2016 -0700
+
+    Update README.md
+
+[33mcommit 346fc29cb1f26e693ee5a1deff4e5eed15b625d7[m
+Author: Peter Lowe <peter.lowe42@gmail.com>
+Date:   Tue Apr 12 09:40:55 2016 -0700
+
+    Update README.md
+
+[33mcommit 4a6320aa0cbe1df7e66352883e4ea98995b95f7e[m
+Author: Peter Lowe <peter.lowe42@gmail.com>
+Date:   Tue Apr 12 09:38:51 2016 -0700
+
+    Update README.md
+
+[33mcommit 75ec89f2efed4d22432eaf089019f15c3ddd6f01[m
+Author: Peter Lowe <peter.lowe42@gmail.com>
+Date:   Tue Apr 12 09:35:46 2016 -0700
+
+    Initial commit
