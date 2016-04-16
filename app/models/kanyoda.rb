@@ -15,7 +15,7 @@ private
   def self.make_tweet
     original = self.get_tweet
     if original == @@last_tweet
-      original = self.get_tweet(rand(0...20)) 
+      original = self.get_tweet(rand(1...20)) 
     else
       @@last_tweet = original
     end 
