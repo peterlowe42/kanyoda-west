@@ -39,7 +39,7 @@ private
       hour_ago = (Time.now.utc) - 1.hours
       tweet = $twitter.user_timeline("kanyewest").first
       if tweet.created_at < hour_ago 
-        tweet = $twitter.user_timeline("kanyewest",{count: 200, include_rts: true})[rand(1...200)]
+        tweet = $twitter.user_timeline("kanyewest",{count: 200})[rand(1...200)]
       end 
     return tweet.text
   end
