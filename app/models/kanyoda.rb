@@ -11,12 +11,6 @@ private
 
   def self.make_tweet
     original = self.get_tweet
-    # byebug 
-    # if original == @@last_tweet
-    #   original = self.get_tweet(rand(1...20)) 
-    # else
-    #   @@last_tweet = original
-    # end 
     clean_tweet = self.clean_up_tweet(original)
     new_tweet = self.yodaize(clean_tweet)
     if self.tweet_ok?(new_tweet, clean_tweet)
