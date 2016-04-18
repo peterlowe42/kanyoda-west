@@ -2,9 +2,6 @@ class Kanyoda < ActiveRecord::Base
   include ApplicationHelper
   attr_accessor :last_tweet
 
-  @@last_tweet = nil
-
-
   def self.tweet
     tweet = self.make_tweet
     $twitter.update(tweet)
@@ -14,11 +11,6 @@ private
 
   def self.make_tweet
     original = self.get_tweet
-    if original == @@last_tweet
-      original = self.get_tweet(rand(0...20)) 
-    else
-      @@last_tweet = original
-    end 
     clean_tweet = self.clean_up_tweet(original)
     new_tweet = self.yodaize(clean_tweet)
     if self.tweet_ok?(new_tweet, clean_tweet)
@@ -43,13 +35,13 @@ private
   end
 
 
-  def self.get_tweet(rand=nil)
-    if rand.nil?
-      tweet = $twitter.user_timeline("kanyewest").first.text
-    else
-      tweet = $twitter.user_timeline("kanyewest")[rand].text
-    end
-    return tweet 
+  def self.get_tweet
+      hour_ago = (Time.now.utc) - 1.hours
+      tweet = $twitter.user_timeline("kanyewest").first
+      if tweet.created_at < hour_ago 
+        tweet = $twitter.user_timeline("kanyewest",{count: 200})[rand(1...200)]
+      end 
+    return tweet.text
   end
 
 
